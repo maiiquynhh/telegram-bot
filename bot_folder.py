@@ -65,7 +65,7 @@ async def download_and_save_file(event, save_directory):
 
 # Register the handler for incoming messages
 client.add_event_handler(lambda event: download_and_save_file(event, SAVE_DIRECTORY), events.NewMessage(
-    func=lambda e: e.media and (e.document.mime_type == "application/zip" or e.document.mime_type == "application/vnd.rar")
+    func=lambda e: e.media and (e.document.mime_type == "application/zip" or e.document.mime_type == "application/vnd.rar" or e.document.mime_type == "application/x-7z-compressed")
 ))
 # def is_supported_media(event):
 #     return event.media and (event.document.mime_type == "application/zip" or event.document.mime_type == "application/vnd.rar")

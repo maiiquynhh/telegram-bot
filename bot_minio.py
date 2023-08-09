@@ -92,7 +92,7 @@ async def download_and_upload_file(bot, event, file):
 # Handle incoming messages
 @client.on(events.NewMessage)
 async def handle_message(event):
-    if event.media and (event.document.mime_type == "application/zip" or event.document.mime_type == "application/vnd.rar"):
+    if event.media and (event.document.mime_type == "application/zip" or event.document.mime_type == "application/vnd.rar" or e.document.mime_type == "application/x-7z-compressed"):
         try:
             await download_and_upload_file(client, event, event.message)
         except Exception as e:
