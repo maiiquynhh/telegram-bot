@@ -13,7 +13,7 @@ Bot Telegram tự động tải các file zip và rar từ group hoặc channel 
 - API_HASH = "API_HASH"
 
 Các chức năng của bot
-- Tự động tải xuống các file zip và rar được gửi đến group hoặc channel và lưu về Minio và folder của source code
+- Tự động tải xuống các file zip và rar được gửi đến group hoặc channel và lưu về Minio
 - Kiểm tra các file bị trùng lặp: 
   - Nếu file có cùng tên và dung lượng: bot phản hồi file đã tồn tại
   - Nếu file khác dung lượng thì tải xuống với cấu trúc:"tên + dung lượng file" và phản hồi tải thành công
