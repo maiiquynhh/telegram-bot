@@ -39,6 +39,9 @@ async def download_and_save_file(event, save_directory):
         # Ensure the file_path is awaited and get its result
         file_path = await file_path
         
+        if not os.path.exists(save_directory):
+            os.makedirs(save_directory)
+        
         new_file_path = os.path.join(save_directory, file_name)
         
         if os.path.exists(new_file_path):
