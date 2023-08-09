@@ -1,4 +1,4 @@
-# downloader
+# Telegram bot download file
 Bot Telegram tự động tải các file zip và rar từ group hoặc channel telegram
 
 1. Tạo bot và lấy token từ BotFather
