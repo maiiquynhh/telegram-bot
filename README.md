@@ -1,6 +1,9 @@
 # Telegram bot download file
 Bot Telegram tự động tải các file zip và rar từ group hoặc channel telegram
 
+- file bot_folder.py: lưu các file về 1 folder
+- file bot_minio.py: lưu các file trên Minio
+
 1. Tạo bot và lấy token từ BotFather
 2. Cho bot join vào group hoặc channel
 3. Thay đổi các cấu hình trong source code
@@ -13,8 +16,11 @@ Bot Telegram tự động tải các file zip và rar từ group hoặc channel 
 - API_HASH = "API_HASH"
 
 Các chức năng của bot
-- Tự động tải xuống các file zip và rar được gửi đến group hoặc channel và lưu về Minio
+- Tự động tải xuống các file zip và rar được gửi đến group hoặc channel và lưu về Minio hoặc folder
+- Bot xử lý nhiều file cùng 1 lúc và tải được các file có dung lượng lớn
 - Kiểm tra các file bị trùng lặp: 
   - Nếu file có cùng tên và dung lượng: bot phản hồi file đã tồn tại
   - Nếu file khác dung lượng thì tải xuống với cấu trúc:"tên + dung lượng file" và phản hồi tải thành công
+
+
 
