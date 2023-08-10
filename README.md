@@ -6,7 +6,7 @@ Bot Telegram tự động tải các file zip và rar từ group hoặc channel 
 
 1. Tạo bot và lấy token từ BotFather
 2. Cho bot join vào group hoặc channel
-3. Thay đổi các cấu hình trong source code
+3. Cấu hình trong file .env
 - TOKEN = "BOT_TOKEN" 
 - MINIO_ENDPOINT = "localhost:9000"
 - MINIO_ACCESS_KEY = "MINIO_ACCESS_KEY"
