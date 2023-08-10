@@ -6,16 +6,17 @@ import multiprocessing
 from telethon import TelegramClient, events, utils
 from minio import Minio
 import io
-
+from dotenv import load_dotenv
 import logging
+
+load_dotenv()
+
 logging.basicConfig(level=logging.DEBUG)
 
-TOKEN = "BOT_TOKEN" 
-
-# Telethon configurations
-API_ID = 1234567 
-API_HASH = "API_HASH"
-SAVE_DIRECTORY = "D:\\Downloader" 
+TOKEN = os.getenv("BOT_TOKEN")
+API_ID = int(os.getenv("API_ID"))
+API_HASH = os.getenv("API_HASH")
+SAVE_DIRECTORY = os.getenv("SAVE_DIRECTORY")
 
 executor = concurrent.futures.ThreadPoolExecutor()
 

@@ -6,18 +6,20 @@ import multiprocessing
 from telethon import TelegramClient, events, utils
 from minio import Minio
 import io
-
+from dotenv import load_dotenv
 import logging
+
+load_dotenv()
+
 logging.basicConfig(level=logging.DEBUG)
 
-TOKEN = "BOT_TOKEN" 
-
-MINIO_ENDPOINT = "localhost:9000"
-MINIO_ACCESS_KEY = "MINIO_ACCESS_KEY"
-MINIO_SECRET_KEY = "MINIO_SECRET_KEY"
-MINIO_BUCKET_NAME = "downloader-bot"
-API_ID = 1234567 
-API_HASH = "API_HASH"
+TOKEN = os.getenv("BOT_TOKEN")
+MINIO_ENDPOINT = os.getenv("MINIO_ENDPOINT")
+MINIO_ACCESS_KEY = os.getenv("MINIO_ACCESS_KEY")
+MINIO_SECRET_KEY = os.getenv("MINIO_SECRET_KEY")
+MINIO_BUCKET_NAME = os.getenv("MINIO_BUCKET_NAME")
+API_ID = int(os.getenv("API_ID"))
+API_HASH = os.getenv("API_HASH")
 
 minio_client = Minio(
     MINIO_ENDPOINT,
@@ -25,10 +27,6 @@ minio_client = Minio(
     secret_key=MINIO_SECRET_KEY,
     secure=False,
 )
-
-# Telethon configurations
-API_ID = 1234567 
-API_HASH = "API_HASH"
 
 executor = concurrent.futures.ThreadPoolExecutor()
 
