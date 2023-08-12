@@ -25,7 +25,7 @@ Các chức năng của bot
 Nhiều file được gửi sẽ được xử lý riêng, file nặng sẽ download lâu hơn:
 <img src="https://github.com/maiiquynhh/telegram-bot/issues/1#issue-1847615024">
 <img src="https://github.com/maiiquynhh/telegram-bot/issues/2#issue-1847620362"> 
-
+![Alt text]([image link](https://github.com/maiiquynhh/telegram-bot/issues/2#issue-1847620362))
 File log khi có file được gửi đến
 <img src="https://github.com/maiiquynhh/telegram-bot/issues/3#issue-1847620765">
 
